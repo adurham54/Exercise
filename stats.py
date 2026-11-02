@@ -44,9 +44,7 @@ for line in fh:
         ex_amt= float(ex_ls[0])
         exercise.append(ex_amt)
 
-print(exercise)
 print(average(exercise))
 print(prop_above(exercise))
-print(len(exercise))
 print(median(exercise))
 plot_histo(exercise, 5)
