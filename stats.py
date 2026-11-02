@@ -35,3 +35,4 @@ for line in fh:
 print(exercise)
 print(average(exercise))
 print(prop_above(exercise))
+print(len(exercise))
