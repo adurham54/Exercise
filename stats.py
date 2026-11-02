@@ -15,7 +15,7 @@ nums_ls = list()
 
 def average(ls):
     for num in ls:
-        if num != ' ':
+        if num != '':
             num = float(num)
             nums_ls.append(num)
     return sum(nums_ls)/len(nums_ls)
@@ -23,13 +23,14 @@ def average(ls):
 def prop_above(ls):
     avg = average(ls)
     for num in ls:
-        if num > avg:
+        if float(num) > avg:
             above_ls.append(num)
     return len(above_ls)/len(ls)
      
 for line in fh:
     ex_ls = line.split(",")
-    exercise.append(ex_ls[0])
+    if ex_ls[0] != '':
+        exercise.append(ex_ls[0])
 
 print(exercise)
 print(average(exercise))
