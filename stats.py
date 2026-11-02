@@ -26,6 +26,18 @@ def prop_above(ls):
         if float(num) > avg:
             above_ls.append(num)
     return len(above_ls)/len(ls)
+
+def median(ls):
+    ls.sort()
+    if len(ls)%2 == 0:
+        med= len(ls)/2
+        averagable_ls = list()
+        averagable_ls.append(ls[med])
+        averagable_ls.append(ls[med+1])
+        return avg(averagable_ls)
+    else:
+        med= len(ls)//2
+        return ls[med]
      
 for line in fh:
     ex_ls = line.split(",")
@@ -36,3 +48,4 @@ print(exercise)
 print(average(exercise))
 print(prop_above(exercise))
 print(len(exercise))
+print(median(exercise))
