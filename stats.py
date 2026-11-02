@@ -42,10 +42,12 @@ def median(ls):
 for line in fh:
     ex_ls = line.split(",")
     if ex_ls[0] != '':
-        exercise.append(ex_ls[0])
+        ex_amt= float(ex_ls[0])
+        exercise.append(ex_amt)
 
 print(exercise)
 print(average(exercise))
 print(prop_above(exercise))
 print(len(exercise))
 print(median(exercise))
+plot_histo(exercise, 5)
