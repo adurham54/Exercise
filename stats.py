@@ -18,6 +18,7 @@ def average(ls):
         if num != ' ':
             num = float(num)
             nums_ls.append(num)
+    return sum(nums_ls)/len(nums_ls)
 
 def prop_above(ls):
     avg = average(ls)
@@ -31,3 +32,5 @@ for line in fh:
     exercise.append(ex_ls[0])
 
 print(exercise)
+print(average(exercise))
+print(prop_above(exercise))
